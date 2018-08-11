@@ -1,0 +1,95 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="hello">
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+              <view class="weui-form-preview__item">
+                <view class="weui-form-preview__value_in-hd1"> 您本月的工资收入</view>
+                <view class="weui-form-preview__value_in-hd"> ¥{{salaryOverview.total}}</view>
+                <view class="weui-form-preview__value_in-hd1">(以上工资收入不含食宿扣除部分)
+                </view>
+
+              </view>
+            </view>
+          </view>
+        </view>
+
+        <view class="weui-cells__title">具体工资列表项</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../../images/24.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">上班基本工资</view>
+            <view class="weui-cell__ft" style="font-size:26px; color:#5CACEE">¥{{salaryOverview.basicSalary}}</view>
+          </view>
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../../images/39.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">加班费</view>
+            <view class="weui-cell__ft" style="font-size:26px; color:#5CACEE">¥{{salaryOverview.moneyForOverTime}}</view>
+          </view>
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../../images/29.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">出勤奖</view>
+            <view class="weui-cell__ft" style="font-size:26px; color:#5CACEE">¥{{salaryOverview.moneyForContinuedWork}}</view>
+          </view>
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../../images/26.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">打卡抽奖</view>
+            <view class="weui-cell__ft" style="font-size:26px; color:#5CACEE">¥{{salaryOverview.moneyOfLottery}}</view>
+          </view>
+          
+          
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../../images/27.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">请假扣除</view>
+            <view class="weui-cell__ft" style="font-size:26px; color:#5CACEE">- ¥{{salaryOverview.deductionOfOffTime}}</view>
+          </view>
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../../images/24.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </view>
+            <view class="weui-cell__bd">借支扣除</view>
+            <view class="weui-cell__ft" style="font-size:26px; color:#5CACEE">- ¥{{salaryOverview.moneyOfBorrow}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">或许您想去...</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="page">
+          <view class="page__bd">
+            <view class="container">
+              <view class="weui-grids">
+                <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+                  <navigator url="{{item.url}}">
+                    <view class="weui-grid__icon">
+                      <image src=" {{item.icon}}" mode="scaleToFill" />
+                      <view class="weui-badge" wx:if="{{item.name=='消息' && unReadCount!=0}}" style="position: absolute;top: -.4em;right: -.4em;">{{unReadCount}}</view>
+                    </view>
+                    <text class="weui-grid__label">{{item.name}}</text>
+                  </navigator>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

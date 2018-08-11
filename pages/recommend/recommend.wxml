@@ -1,0 +1,54 @@
+<swiper autoplay>
+  <swiper-item>
+    <image src="../../images/background.png" class="slide-image" mode="aspectFill" />
+  </swiper-item>
+</swiper>
+
+
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">^_^ 亲，你也可以推荐你自己哦 ^_^</view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg" bindtap='adClick' hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="../../images/ad1.png" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <!--<view class="weui-media-box__title">
+              <text space="ensp">工  资    ¥1000/月</text>
+            </view>-->
+            <view class="weui-media-box__desc">
+              <text space="ensp">工作地点     高新西区合作路</text>
+            </view>
+            <view class="weui-media-box__desc">
+              <text space="ensp">工作要求     男女不限，23到45岁之间</text>
+            </view>
+            <view class="weui-media-box__desc1">
+              <text space="ensp">推荐奖金     ¥1200/人</text>
+            </view>
+          </view>
+        </view>
+        <view class="weui-media-box weui-media-box_appmsg" bindtap='adClick' hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="../../images/ad2.png" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <!--<view class="weui-media-box__title">
+              <text space="ensp">工  资    ¥1000/月</text>
+            </view>-->
+            <view class="weui-media-box__desc">
+              <text space="ensp">工作地点     太原市小店区</text>
+            </view>
+            <view class="weui-media-box__desc">
+              <text space="ensp">工作要求     男女不限，20到45岁之间</text>
+            </view>
+            <view class="weui-media-box__desc1">
+              <text space="ensp">推荐奖金     ¥2000/人</text>
+            </view>
+          </view>
+        </view>            
+      </view>
+    </view>
+  </view>
+</view>

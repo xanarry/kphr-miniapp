@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/phoneCheck/phoneCheck",
+    "pages/borrow/borrow",
+    "pages/card/card",
+    "pages/newsDetails/newsDetails",
+    "pages/holiday/holiday",
+    "pages/recommend/recommend",
+    "pages/resetPassword/resetPassword",
+    "pages/retrievePassword/retrievePassword",
+    "pages/prize/prize",
+    "pages/manager/manager",
+    "pages/msg/msg",
+    "pages/msg/msg_fail",
+    "pages/news/news",
+    "pages/msg/msg_success"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0066cc",
+    "navigationBarTitleText": "快聘人力管家",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "selectedIconPath": "images/001.png",
+        "iconPath": "images/000.png",
+        "pagePath": "pages/index/index",
+        "text": "工资"
+      },
+      {
+        "selectedIconPath": "images/003.png",
+        "iconPath": "images/002.png",
+        "pagePath": "pages/prize/prize",
+        "text": "抽奖"
+      },
+      {
+        "selectedIconPath": "images/005.png",
+        "iconPath": "images/004.png",
+        "pagePath": "pages/manager/manager",
+        "text": "经纪人"
+      }
+    ]
+  }
+}

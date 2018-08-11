@@ -1,0 +1,24 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+    <view class="page__hd">
+        <image class="widget__arrow" src="../../images/0004.png" mode="aspectFit" style="width:100%;;height:100px;">  
+        </image>  
+    </view>
+    <view class="page__bd">
+
+        <view class="weui-cells__title">借款金额（元）</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindinput='amount' type="number" placeholder="输入您想要的金额" />
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">提交成功后经纪人将在24小时内联系您，请保持电话畅通！</view>
+        
+
+          <view class="weui-btn-area">
+              <button class="weui-btn" type="primary" bindtap="submit">确定提交</button>
+          </view>
+    </view>
+</view>

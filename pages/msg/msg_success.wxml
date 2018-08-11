@@ -1,0 +1,22 @@
+<view class="page">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="success" size="93"></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">操作成功</view>
+            <view class="weui-msg__desc">您的申请已提交管理员审核，请耐心等待...</view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+            <navigator url="../../pages/index/index">
+                <button class="weui-btn" type="primary">返回主页</button>
+            </navigator>
+            <navigator url="../../pages/borrow/borrow">
+                <button class="weui-btn" type="default">重新编辑</button>
+            </navigator>
+            </view>
+        </view>
+       
+    </view>
+</view>

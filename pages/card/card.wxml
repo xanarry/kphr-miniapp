@@ -1,0 +1,90 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+  <view class="weui-cells__title2" style='margin-top:1em'>您本月请假、加班总时长</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="page">
+      <view class="container">
+        <view class="weui-grids">
+
+          <view class="section">
+            <view class="tui-table-view">
+              <view class="tui-col-3">
+                <view style='font-size: 16px ; font-weight: bold'>请假</view>
+                <text class="weui-grid__label">{{overAndOffTime.offTime}}h</text>
+              </view>
+              <view class="tui-col-3">
+                <view style='font-size: 16px; font-weight: bold'>加班1</view>
+                <text class="weui-grid__label">{{overAndOffTime.overTimeOfWeekDay}}h</text>
+              </view>
+              <view class="tui-col-3">
+                <view style='font-size: 16px; font-weight: bold'>加班2</view>
+                <text class="weui-grid__label">{{overAndOffTime.overTimeOfWeekend}}h</text>
+              </view>
+              <view class="tui-col-3">
+                <view style='font-size: 16px; font-weight: bold'>加班3</view>
+                <text class="weui-grid__label">{{overAndOffTime.overTimeOfOffDay}}h</text>
+              </view>
+
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="page__bd">
+    <view class="weui-cells__title1" style='margin-top:1em'>^_^ 请在此处打卡哦，亲 ^_^</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <image src="../../images/35.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-label">日期</view>
+        </view>
+        <view class="weui-cell__ft">
+          <picker mode="date" value="{{date}}" start="2018-07-01" end="2020-09-01" bindchange="bindDateChange">
+            <view class="weui-input">{{date}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <image src="../../images/33.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+          </view>
+          <view class="weui-cell__bd weui-cell__bd_in-select-after">
+            <view class="weui-label">加班时长</view>
+          </view>
+          <view class="weui-cell__ft">
+            <picker bindchange="bindOverTimeChange" value="{{overTimeIndex}}" range="{{overTime}}">
+              <view class="weui-select weui-select_in-select-after">{{overTime[overTimeIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <image src="../../images/32.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+          </view>
+          <view class="weui-cell__bd weui-cell__bd_in-select-after">
+            <view class="weui-label">请假时长</view>
+          </view>
+          <view class="weui-cell__ft">
+            <picker bindchange="bindOffTimeChange" value="{{offTimeIndex}}" range="{{offTime}}">
+              <view class="weui-select weui-select_in-select-after">{{offTime[offTimeIndex]}} </view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+    <view class="weui-cells__title">提示：当日打卡后即可参与抽奖哦!</view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="submit">确定</button>
+    </view>
+  </view>
+</view>

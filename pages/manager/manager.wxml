@@ -1,0 +1,62 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__hd">
+    <image class="widget__arrow" src="{{manager.image}}" mode="aspectFit" style="width:100%;;height:150px;">
+    </image>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-cells__title">经纪人相关信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../images/43.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">姓名</view>
+        <view class="weui-cell__ft">{{manager.name}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../images/40.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">手机</view>
+        <view class="weui-cell__ft" bindtap='phoneCall'>{{manager.phone}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../images/42.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">微信</view>
+        <view class="weui-cell__ft" bindlongtap='copyWechat'>{{manager.wechat}}</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="../../images/41.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">QQ</view>
+        <view class="weui-cell__ft" bindlongtap='copyQQ'>{{manager.QQ}}</view>
+      </view>
+    </view>
+
+    <view class="weui-cells__title" wx:if='{{starInServer==0}}'>您{{preMonth}}月对经纪人的评分</view>
+    <view class="weui-cells__title" wx:if='{{starInServer!=0}}'>您{{preMonth}}月已经对经纪人评过分啦^_^</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__bd">
+          <block wx:for="{{star}}" wx:key="index">
+            <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc2' src='../../images/51.png'></image>
+          </block>
+          <block wx:for="{{unStar}}" wx:key="index">
+            <image catchtap='in_xin' id='{{index+1}}' data-in='use_sc' src='../../images/50.png'></image>
+          </block>
+        </view>
+        <view class="weui-cell__ft">{{star}}星</view>
+      </view>
+    </view>
+    <view class="weui-cells__title">(您可以在本月的前7天对经纪人的上一月表现评分)</view>
+
+    <view class="weui-btn-area" wx:if='{{dayOfMonth<=7 && starInServer==0}}'>
+      <button class="weui-btn" type="primary" bindtap="submit">确定</button>
+    </view>
+
+  </view>
+</view>

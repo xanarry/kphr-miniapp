@@ -1,0 +1,43 @@
+<!--登陆界面-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+ <view class="page__hd">
+        <image class="widget__arrow" src="../../images/kphr_logo.png" mode="aspectFit" style="width:100%;;height:120px;">  
+        </image>  
+    </view>
+     
+    <view class="page__bd">
+        
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">工号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindinput='employeeID' placeholder="请输入工号"/>
+                </view>
+            </view>
+            
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">密码</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <input class="weui-input" password='true' bindinput='password'  placeholder="请输入密码"/>
+                </view>
+            </view>
+        </view>
+
+          <view class="weui-btn-area">
+              <button class="weui-btn" type="primary" bindtap="login">确定</button>
+         </view>
+
+        <view class="weui-footer weui-footer_fixed-bottom">
+            <view class="weui-footer__links">
+                <navigator url="../../pages/retrievePassword/retrievePassword" class="weui-footer__link">忘记密码</navigator>
+            </view>
+            <view class="weui-footer__text"></view>
+        </view>
+
+
+    </view>
+</view>
